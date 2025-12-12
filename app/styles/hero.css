@@ -1,0 +1,413 @@
+/* styles/HeroSection.module.css */
+
+/* Variables pour les couleurs */
+:root {
+  --color-white: #FFFFFF;
+  --color-forest-green: #228B22; /* Vert Forêt - Primaire */
+  --color-lime-green: #9ACD32;   /* Vert Citron - Accent */
+}
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre (ajustez si besoin) */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1. Style des images de fond */
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Par défaut, les images sont cachées */
+  transition: opacity 1.5s ease-in-out; /* Animation de fondu */
+  z-index: 1; /* Sous l'overlay et le contenu */
+}
+
+.backgroundImage.active {
+  opacity: 1; /* L'image active est visible */
+}
+
+/* 2. Voile (Overlay) pour la lisibilité */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Vert semi-transparent, pour donner le ton "vert" à la section */
+  background-color: rgba(34, 139, 34, 0.5); /* var(--color-forest-green) avec 50% d'opacité */
+  z-index: 2; /* Entre les images et le contenu */
+}
+
+/* 3. Contenu (Titre et Bouton) */
+.content {
+  position: relative;
+  z-index: 3; /* Au-dessus de tout */
+  text-align: center;
+  color: var(--color-white);
+  padding: 20px;
+}
+
+.title {
+  font-size: 4rem; /* Très grand pour le titre principal */
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Pour une meilleure lisibilité */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: var(--color-white);
+}
+
+.ctaButton {
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  /* Utilisation de la couleur Vert Citron pour l'appel à l'action */
+  background-color: var(--color-lime-green); 
+  color: var(--color-forest-green); /* Texte Vert Foncé sur bouton clair */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: darken(#9ACD32, 10%); /* Un peu plus foncé au survol */
+}
+
+/* Rendre le design responsive sur mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+      font-size: 1.2rem;
+  }
+  .ctaButton {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+}
+
+
+/* styles/MissionSection.module.css */
+
+/* Réutilisation des variables de la Section 1 */
+:root {
+  --color-white: #FFFFFF;
+  --color-forest-green: #228B22; 
+  --color-lime-green: #9ACD32;   
+  --color-grey-light: #F0F0F0; /* Ajout d'un gris très clair pour le fond de la section */
+}
+
+.missionContainer {
+  background-color: var(--color-grey-light); /* Fond clair pour la démarquer de la section Hero */
+  padding: 80px 20px;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* 1. Colonne Image */
+.imageColumn {
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.missionImage {
+  object-fit: cover;
+  display: block;
+}
+
+/* 2. Colonne Texte */
+.textColumn {
+  flex: 1.5; /* Donne plus d'espace au texte */
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-forest-green); /* Titre principal en Vert Forêt */
+  margin-bottom: 20px;
+}
+
+.leadText {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-lime-green); /* Sous-titres en Vert Citron pour l'accent */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.bodyText {
+  line-height: 1.7;
+  color: #333; /* Texte du corps en noir/gris foncé */
+  margin-bottom: 15px;
+}
+
+.missionButton {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--color-forest-green); 
+  color: var(--color-white); 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.missionButton:hover {
+  background-color: darken(#228B22, 10%);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .contentWrapper {
+    flex-direction: column; /* Passage en empilement vertical */
+  }
+  .imageColumn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
+
+/* styles/CallToActionSection.module.css */
+
+/* Variables pour les couleurs */
+:root {
+  --color-white: #FFFFFF;
+  --color-forest-green: #1c1f1c; 
+  --color-lime-green: #9ACD32;   
+  --color-dark-green-hover: #88d888;
+}
+
+.ctaContainer {
+  /* Utilisation du Vert Forêt pour un impact fort et chaleureux */
+  background-color: var(--color-forest-green); 
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--color-white);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.ctaButton {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 2px solid var(--color-white);
+  border-radius: 50px; /* Boutons arrondis pour un aspect moderne */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Style du bouton principal (Faire un Don) */
+.primary {
+  background-color: var(--color-lime-green); 
+  color: var(--color-forest-green); 
+  border-color: var(--color-lime-green);
+}
+
+.primary:hover {
+  background-color: var(--color-forest-green);
+  color: var(--color-lime-green);
+  border-color: var(--color-lime-green);
+  transform: translateY(-2px);
+}
+
+/* Style du bouton secondaire (Partenaire) */
+.secondary {
+  background-color: transparent; 
+  color: var(--color-white);
+}
+
+.secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-forest-green);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .buttonGroup {
+    flex-direction: column; 
+    gap: 15px;
+  }
+  .ctaButton {
+    width: 100%; /* Les boutons prennent toute la largeur sur mobile */
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* styles/Footer.module.css */
+
+/* Variables pour les couleurs */
+:root {
+  --color-white: #FFFFFF;
+  --color-forest-green: #228B22; 
+  --color-lime-green: #9ACD32;   
+  --color-dark-text: #E0E0E0; /* Gris très clair pour le texte sur fond sombre */
+}
+
+.footerContainer {
+  background-color: var(--color-forest-green); /* Fond Vert Forêt */
+  color: var(--color-dark-text);
+  padding-top: 50px;
+  border-top: 5px solid var(--color-lime-green); /* Ligne d'accentuation */
+}
+
+.footerWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Titre du logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white); /* Le nom est en blanc éclatant */
+  margin-bottom: 20px;
+}
+
+/* Colonnes */
+.colBranding, .colLinks, .colContact {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Titres de colonnes */
+.colTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-lime-green); /* Les titres sont en Vert Citron */
+    margin-bottom: 20px;
+}
+
+/* Liens et Texte */
+.missionSummary, .colContact p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footerLink {
+    color: var(--color-dark-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+    color: var(--color-lime-green);
+}
+
+/* Liste de liens */
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkList li {
+    margin-bottom: 10px;
+}
+
+/* Icônes Sociales */
+.socialIcons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.socialLink {
+    font-size: 1.5rem; /* Taille des icônes */
+    color: var(--color-white);
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.socialLink:hover {
+    color: var(--color-lime-green);
+    transform: scale(1.1);
+}
+
+/* Barre de Copyright */
+.footerBottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footerWrapper {
+    flex-direction: column; 
+    gap: 30px;
+  }
+}
+
+
