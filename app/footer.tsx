@@ -49,13 +49,13 @@ const Footer = () => {
         <div className="colContact">
           <h5 className="colTitle">Contactez-nous</h5>
           <p>
-            Adresse : [À insérer - Ex: Siège FBM, Bongolava, Madagascar]
+            Adresse : Port-Bergé, Région Sofia Madagascar
           </p>
           <p>
-            Email : <a href="mailto:contact@fbm-maitso.org" className="footerLink">contact@fbm-maitso.org</a>
+            Email : <a href="mailto:contact@fbm-maitso.org" className="footerLink">cyprien@bongolavamaitso.mg</a>
           </p>
           <p>
-            Téléphone : <a href="tel:+26112345678" className="footerLink">+261 XX XX XXX XX</a>
+            Téléphone : <a href="tel:+26112345678" className="footerLink">+261 34 73 805 99</a>
           </p>
         </div>
 

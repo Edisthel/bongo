@@ -41,7 +41,7 @@ const TeamResponsibilities = () => {
 
   // Les couleurs sont définies pour un thème vert et blanc
   const primaryColor = 'text-green-700'; // Vert foncé pour le texte important
-  const bgColor = 'bg-white';
+  const bgColor = 'bg-gradient-to-br from-green-100 to-indigo-200';
   const accentBg = 'bg-green-50'; // Arrière-plan légèrement vert pour les sections
   const borderColor = 'border-green-300';
 

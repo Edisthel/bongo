@@ -4,6 +4,7 @@ import ResultsSection from "./resultat";
 import CallToActionSection from "./action";
 import Footer from "./footer";
 import TeamResponsibilities from "./responsabilite";
+import Galerie from "./gallerie";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <MissionSection />
         <TeamResponsibilities />
         <ResultsSection />
+        <Galerie />
         <CallToActionSection />
         <Footer />
       </main>
