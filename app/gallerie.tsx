@@ -9,76 +9,9 @@ import {
   X,     // Icône pour fermer le modal
 } from 'lucide-react'; // Nous utiliserons Lucide pour les icônes.
 
-const primaryColor = 'text-white-700'; // Vert foncé pour le texte important
+const primaryColor = 'text-yellow-700'; // Vert foncé pour le texte important
 
-const galleryItems = [
-  {
-    id: 1,
-    src: '/img/1.jpg',
-    alt: 'Un magnifique paysage de montagne',
-    width: 1920, // Largeur réelle de l'image originale
-    height: 1953, // Hauteur réelle de l'image originale
-  },
-  {
-    id: 2,
-    src: '/img/2.jpg',
-    alt: 'Une rue animée dans une grande ville',
-    width: 1600,
-    height: 800,
-  },
-  {
-    id: 3,
-    src: '/img/3.jpg',
-    alt: 'Un portrait en noir et blanc',
-    width: 1920,
-    height: 1953,
-  },
-  {
-    id: 4,
-    src: '/img/bio2.png',
-    alt: 'Un magnifique paysage de montagne',
-    width: 1920, // Largeur réelle de l'image originale
-    height: 1953, // Hauteur réelle de l'image originale
-  },
-  {
-    id: 5,
-    src: '/img/bio3.png',
-    alt: 'Une rue animée dans une grande ville',
-    width: 1600,
-    height: 800,
-  },
-  {
-    id: 6,
-    src: '/img/bio5.png',
-    alt: 'Un portrait en noir et blanc',
-    width: 1920,
-    height: 1953,
-  },
-  {
-    id: 7,
-    src: '/img/bio6.png',
-    alt: 'Un magnifique paysage de montagne',
-    width: 1920, // Largeur réelle de l'image originale
-    height: 1953, // Hauteur réelle de l'image originale
-  },
-  {
-    id: 8,
-    src: '/img/haz3.png',
-    alt: 'Une rue animée dans une grande ville',
-    width: 1600,
-    height: 800,
-  },
-  {
-    id: 9,
-    src: '/img/haz4.png',
-    alt: 'Un portrait en noir et blanc',
-    width: 1920,
-    height: 1953,
-  },
-  // ... Ajoutez plus d'images
-];
-
-export default function Galerie() {
+export default function Galerie({message, galleryItems}) {
   const [selectedImage, setSelectedImage] = useState(null);
   
     // Fonction pour ouvrir le modal avec une image
@@ -99,13 +32,13 @@ export default function Galerie() {
           <h1 className={`text-4xl font-extrabold tracking-tight sm:text-5xl ${primaryColor} mb-4`}>
             Gallerie d'image
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-yellow-600 sm:mt-4">
-            Préserver et restaurer les écosytèmes naturels.
+          <p className="mt-3 max-w-2xl mx-auto text-xl text-green-800 sm:mt-4">
+            {message}
           </p>
         </div>
       <div className="image-grid" >
         {galleryItems.map((item) => (
-          <div key={item.id} className="image-item" onClick={() => openModal(item.src)}>
+          <div key={item.id} className="image-item animate-reveal hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105" onClick={() => openModal(item.src)}>
             <Image
               src={item.src}
               alt={item.alt}
@@ -126,7 +59,7 @@ export default function Galerie() {
         .gallery-container {
           margin: 0 auto;
           padding: 20px;
-          background-color: #034e03ff;
+          background-color: #c9e2c9ff;
         }
         .image-grid {
           display: grid;

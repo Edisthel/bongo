@@ -30,7 +30,7 @@ const MissionSection = () => {
         </div>
 
         {/* Colonne Droite : Texte de la Mission */}
-        <div className="textColumn">
+        <div className="textColumn animate-reveal">
           <h2 className="title">
             Corridor Forestier
           </h2>

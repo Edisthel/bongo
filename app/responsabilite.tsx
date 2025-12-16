@@ -3,12 +3,15 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { galleryItems } from "./imgaesEquipe";
+
 import {
   Users, // Icône pour l'engagement communautaire
   Leaf,  // Icône pour la protection de la biodiversité
   Zap,   // Icône pour l'innovation
   X,     // Icône pour fermer le modal
 } from 'lucide-react'; // Nous utiliserons Lucide pour les icônes.
+import Galerie from './gallerie';
 
 // Les données de l'équipe et des responsabilités
 const teamMembers = [
@@ -54,7 +57,7 @@ const TeamResponsibilities = () => {
           {teamMembers.map((member) => (
             <div 
               key={member.id} 
-              className={`relative w-24 h-24 sm:w-32 sm:h-32 rounded-full shadow-lg ${borderColor} border-4 transition-transform duration-300 hover:scale-105 cursor-pointer`}
+              className={` animate-reveal relative w-24 h-24 sm:w-32 sm:h-32 rounded-full shadow-lg ${borderColor} border-4 transition-transform duration-300 hover:scale-105 cursor-pointer`}
               onClick={() => openModal(member.imageUrl)} // Clic pour agrandir
             >
               {/* Utilisation du composant Image de Next.js pour l'optimisation */}
@@ -71,7 +74,7 @@ const TeamResponsibilities = () => {
         </div>
 
         {/* Section Titre et Texte Principal */}
-        <div className="text-center mb-16">
+        <div className="animate-reveal text-center mb-16">
           <h1 className={`text-4xl font-extrabold tracking-tight sm:text-5xl ${primaryColor} mb-4`}>
             Responsabilité
           </h1>
@@ -85,7 +88,7 @@ const TeamResponsibilities = () => {
           <h2 className={`text-2xl font-bold ${primaryColor} mb-8 border-b-2 border-green-300 pb-2`}>
             Nos responsabilités
           </h2>
-          <dl className="space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:gap-12">
+          <dl className="animate-reveal space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:gap-12">
             {responsibilities.map((item, index) => (
               <div key={index} className="flex flex-col items-start p-4 bg-white rounded-md shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className={`flex items-center justify-center h-12 w-12 rounded-md ${accentBg} border-2 ${borderColor}`}>
@@ -102,6 +105,7 @@ const TeamResponsibilities = () => {
             ))}
           </dl>
         </div>
+        <Galerie message= "Nos équipes en action" galleryItems = {galleryItems} />
       </div>
 
       {/* Modal d'agrandissement de l'image */}
