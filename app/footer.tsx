@@ -2,11 +2,7 @@
 import React from 'react';
 import './styles/hero.css';
 import Link from 'next/link';
-
-// Icônes des réseaux (simulées par des emojis ou à remplacer par des icônes réelles comme Font Awesome)
-const IconFacebook = () => <span>📘</span>;
-const IconTwitter = () => <span>🐦</span>;
-const IconLinkedIn = () => <span>💼</span>;
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,14 +18,14 @@ const Footer = () => {
             Gestion durable de l'Aire Protégée du corridor forestier Bongolava et développement des communautés locales.
           </p>
           <div className="socialIcons">
-            <Link href="https://www.facebook.com/FBM" passHref className="socialLink" aria-label="Facebook">
-              <IconFacebook />
+            <Link href="https://www.facebook.com/profile.php?id=100087973928660" passHref className="socialLink" aria-label="Facebook">
+              <Facebook />
             </Link>
             <Link href="https://www.twitter.com/FBM" passHref className="socialLink" aria-label="Twitter">
-              <IconTwitter />
+              <Twitter />
             </Link>
             <Link href="https://www.linkedin.com/company/FBM" passHref className="socialLink" aria-label="LinkedIn">
-              <IconLinkedIn />
+              <Linkedin />
             </Link>
           </div>
         </div>

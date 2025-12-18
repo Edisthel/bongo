@@ -1,4 +1,4 @@
-import { User, Award, BarChart2, FlaskConical, Zap } from "lucide-react";
+import { Sprout, BookOpen, UsersRound, Handshake, BookOpenCheck, ChartPie } from "lucide-react";
 
 export default function ResultsSection() {
   return (
@@ -31,13 +31,13 @@ export default function ResultsSection() {
                         hover:-translate-y-2 hover:scale-105">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-300 opacity-0 group-hover:opacity-20
                           blur-xl rounded-2xl transition-all duration-500"></div>
-          <User className="w-14 h-14 text-cyan-300 mb-4 drop-shadow-lg" />
+          <Sprout className="w-14 h-14 text-cyan-300 mb-4 drop-shadow-lg" />
           <h2 className="text-xl font-bold mb-2">Préserver et restaurer les écosytèmes naturels</h2>
           <p className="text-gray-300">
             Maintenir l'équilibre écologique et renforcer la biodiversité locale.
           </p>
           <button className="mt-4 px-4 py-2 rounded-lg bg-yellow-500 hover:bg-cyan-600 transition">
-            Découvrir
+            Préservation
           </button>
         </div>
 
@@ -50,13 +50,13 @@ export default function ResultsSection() {
                         hover:-translate-y-2 hover:scale-105">
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 opacity-0 group-hover:opacity-20
                           blur-xl rounded-2xl transition-all duration-500"></div>
-          <Award className="w-14 h-14 text-yellow-300 mb-4 drop-shadow-lg" />
+          <BookOpen className="w-14 h-14 text-yellow-300 mb-4 drop-shadow-lg" />
           <h2 className="text-xl font-bold mb-2">Sensibiliser et éduquer la population.</h2>
           <p className="text-gray-300">
             Développer une culture environnementale durable.
           </p>
           <button className="mt-4 px-4 py-2 rounded-lg bg-yellow-500 hover:bg-yellow-600 transition">
-            Voir les badges
+            Sensibilisation
           </button>
         </div>
 
@@ -69,13 +69,13 @@ export default function ResultsSection() {
                         hover:-translate-y-2 hover:scale-105">
           <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-lime-300 opacity-0 group-hover:opacity-20
                           blur-xl rounded-2xl transition-all duration-500"></div>
-          <BarChart2 className="w-14 h-14 text-green-300 mb-4 drop-shadow-lg" />
+          <UsersRound className="w-14 h-14 text-green-300 mb-4 drop-shadow-lg" />
           <h2 className="text-xl font-bold mb-2">Impliquer la communauté dans la protection de l'environnement</h2>
           <p className="text-gray-300">
             Construire une gouvernance environnementale participative.
           </p>
           <button className="mt-4 px-4 py-2 rounded-lg bg-yellow-500 hover:bg-green-600 transition">
-            Accéder
+            Protection
           </button>
         </div>
 
@@ -88,13 +88,13 @@ export default function ResultsSection() {
                         hover:-translate-y-2 hover:scale-105">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-300 opacity-0 group-hover:opacity-20
                           blur-xl rounded-2xl transition-all duration-500"></div>
-          <FlaskConical className="w-14 h-14 text-purple-300 mb-4 drop-shadow-lg" />
+          <Handshake className="w-14 h-14 text-purple-300 mb-4 drop-shadow-lg" />
           <h2 className="text-xl font-bold mb-2">Favoriser la collaboration et les partenariats</h2>
           <p className="text-gray-300">
             Multiplier l'impacte et renforcer la solidarité écologique.
           </p>
           <button className="mt-4 px-4 py-2 rounded-lg bg-purple-500 hover:bg-purple-600 transition">
-            Explorer
+            Collaboration
           </button>
         </div>
 
@@ -107,13 +107,13 @@ export default function ResultsSection() {
                         hover:-translate-y-2 hover:scale-105">
           <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-red-400 opacity-0 group-hover:opacity-20
                           blur-xl rounded-2xl transition-all duration-500"></div>
-          <Award className="w-14 h-14 text-pink-300 mb-4 drop-shadow-lg" />
+          <BookOpenCheck className="w-14 h-14 text-pink-300 mb-4 drop-shadow-lg" />
           <h2 className="text-xl font-bold mb-2">Garantir la transparence et la responsabilité</h2>
           <p className="text-gray-300">
             Multiplier l'impacte et renforcer la solidarité écologique.
           </p>
           <button className="mt-4 px-4 py-2 rounded-lg bg-pink-500 hover:bg-pink-600 transition">
-            Commencer
+            Transparence
           </button>
         </div>
 
@@ -126,13 +126,13 @@ export default function ResultsSection() {
                         hover:-translate-y-2 hover:scale-105">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-gray-700 opacity-0 group-hover:opacity-20
                           blur-xl rounded-2xl transition-all duration-500"></div>
-          <Zap className="w-14 h-14 text-gray-400 mb-4 drop-shadow-lg" />
+          <ChartPie className="w-14 h-14 text-gray-400 mb-4 drop-shadow-lg" />
           <h2 className="text-xl font-bold mb-2">Produire et diffuser des données environnementales fiables </h2>
           <p className="text-gray-300">
             Offrir une base de références scientifique pour la prise de décision.
           </p>
           <button className="mt-4 px-4 py-2 rounded-lg bg-gray-500 hover:bg-gray-600 transition">
-            Découvrir
+            Information
           </button>
         </div>
 

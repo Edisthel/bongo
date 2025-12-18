@@ -11,11 +11,19 @@ import {
 
 const primaryColor = 'text-yellow-700'; // Vert foncé pour le texte important
 
-export default function Galerie({message, galleryItems}) {
+interface Gallery{
+  id: number;
+  src: string;
+  alt: string;
+  width : number;
+  height : number;
+}
+
+export default function Galerie({message, galleryItems}: {message: string, galleryItems: Gallery[]}) {
   const [selectedImage, setSelectedImage] = useState(null);
   
     // Fonction pour ouvrir le modal avec une image
-    const openModal = (imageUrl) => {
+    function openModal(imageUrl:any){
       setSelectedImage(imageUrl);
       document.body.style.overflow = 'hidden'; // Empêche le défilement du corps
     };

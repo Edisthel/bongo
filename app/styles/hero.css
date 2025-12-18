@@ -41,6 +41,8 @@
 .missionImage {
   object-fit: cover;
   display: block;
+  padding: 10px;
+  margin: 10px;
 }
 
 /* 2. Colonne Texte */
@@ -184,7 +186,7 @@
 
 .socialLink {
     font-size: 1.5rem; /* Taille des icônes */
-    color: var(--color-white);
+    color: var(--color-yellow-text);
     transition: transform 0.2s ease, color 0.3s ease;
 }
 

@@ -1,7 +1,7 @@
 "use client"
 // components/HeroSection.js
 import React, { useState, useEffect } from 'react';
-// ⚠️ Plus besoin d'importer le fichier CSS Module !
+import Link from 'next/link';
 
 const images = [
   '/img/1.jpg', // Remplacez par vos chemins d'images réels
@@ -64,7 +64,7 @@ const HeroSection = () => {
           py-3 px-8 rounded-full text-lg 
           transition duration-300 ease-in-out shadow-lg transform hover:scale-105
         ">
-          Découvrir Nos Projets 🌱
+         <Link href="/news">Découvrir Nos Projets 🌱</Link> 
         </button>
       </div>
     </div>
