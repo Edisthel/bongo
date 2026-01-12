@@ -3,7 +3,7 @@
 /* Réutilisation des variables de la Section 1 */
 :root {
   --color-white: #FFFFFF;
-  --color-yellow-text: yellow;
+  --color-yellow-text: rgb(174, 236, 29);
   --color-forest-green: #025802; 
   --color-lime-green: #05B63d;   
   --color-dark-text: #E0E0E0; /* Gris très clair pour le texte sur fond sombre */

@@ -2,6 +2,7 @@
 // components/HeroSection.js
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import NavBar from './navBar';
 
 const images = [
   '/img/1.jpg', // Remplacez par vos chemins d'images réels
@@ -28,7 +29,6 @@ const HeroSection = () => {
     // 1. styles.heroContainer -> Remplacé par des classes Tailwind
     // (Plein écran, positionnement relatif, flex pour centrer le contenu)
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-      
       {/* Boucle pour afficher toutes les images avec leur état d'animation */}
       {images.map((imgSrc, index) => (
         <div
@@ -47,10 +47,10 @@ const HeroSection = () => {
 
       {/* 4. styles.content -> Contenu (positionnement Z élevé, centrage du texte, couleur blanche) */}
       <div className="relative z-10 text-center text-white max-w-4xl p-6">
-        
+        <NavBar />
         {/* 5. styles.title -> Titre (grande taille, gras, espacement) */}
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
-          Association Bongolavamaitso
+          Association Fikambanana Bongolava Maitso
         </h1>
         
         {/* 6. styles.subtitle -> Sous-titre (taille moyenne) */}
