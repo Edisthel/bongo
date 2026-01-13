@@ -76,7 +76,7 @@ const TeamResponsibilities = () => {
         {/* Section Titre et Texte Principal */}
         <div className="animate-reveal text-center mb-16">
           <h1 className={`text-4xl font-extrabold tracking-tight sm:text-5xl ${primaryColor} mb-4`}>
-            Responsabilité
+            Actions et Services
           </h1>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600 sm:mt-4">
             Nous agissons dans une démarche durable et transparente.
@@ -86,7 +86,29 @@ const TeamResponsibilities = () => {
         {/* Section Nos Responsabilités */}
         <div className="bg-green-50 rounded-lg p-6 sm:p-10 shadow-xl">
           <h2 className={`text-2xl font-bold ${primaryColor} mb-8 border-b-2 border-green-300 pb-2`}>
-            Nos responsabilités
+            Nos Actions
+          </h2>
+          <dl className="animate-reveal space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:gap-12">
+            {responsibilities.map((item, index) => (
+              <div key={index} className="flex flex-col items-start p-4 bg-white rounded-md shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className={`flex items-center justify-center h-12 w-12 rounded-md ${accentBg} border-2 ${borderColor}`}>
+                  {/* L'icône du composant Lucide React */}
+                  <item.icon className={`h-6 w-6 ${primaryColor}`} aria-hidden="true" />
+                </div>
+                <dt className="mt-5 text-lg leading-6 font-medium text-gray-900">
+                  {item.title}
+                </dt>
+                <dd className="mt-2 text-base text-gray-500">
+                  {item.text}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        <div className="bg-green-50 rounded-lg p-6 sm:p-10 shadow-xl">
+          <h2 className={`text-2xl font-bold ${primaryColor} mb-8 border-b-2 border-green-300 pb-2`}>
+            Nos Services
           </h2>
           <dl className="animate-reveal space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:gap-12">
             {responsibilities.map((item, index) => (

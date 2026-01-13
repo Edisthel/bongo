@@ -6,16 +6,14 @@ import Footer from "./footer";
 import TeamResponsibilities from "./responsabilite";
 import Galerie from "./gallerie";
 import { galleryItems } from "./imgaeFaune";
+import HeroSection2 from "./hero2";
 
 export default function Home() {
   return (
       <main>
-        <HeroSection />
+        <HeroSection2 />
         <MissionSection />
         <TeamResponsibilities />
-        <ResultsSection />
-        <Galerie message= " Préserver et restaurer les écosytèmes naturels." galleryItems = { galleryItems } />
-        <CallToActionSection />
         <Footer />
       </main>
   );
