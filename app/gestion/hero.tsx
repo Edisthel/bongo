@@ -81,27 +81,6 @@ export default function HeroPage() {
           </p>
         </div>
       </section>
-
-      {/* Sections vides pour les liens du menu (à remplir selon ton besoin) */}
-      <section id="mission" className="min-h-[50vh] bg-white text-black px-4 py-16">
-        <h2 className="text-2xl font-semibold mb-4">Présentation</h2>
-        <p>Contenu de la section Présentation.</p>
-      </section>
-
-      <section id="autres" className="min-h-[50vh] bg-gray-100 text-black px-4 py-16">
-        <h2 className="text-2xl font-semibold mb-4">Equipes</h2>
-        <p>Contenu de la section Equipes.</p>
-      </section>
-
-      <section id="apropos" className="min-h-[50vh] bg-white text-black px-4 py-16">
-        <h2 className="text-2xl font-semibold mb-4">Objectifs</h2>
-        <p>Contenu de la section Objectifs.</p>
-      </section>
-
-      <section id="apropos" className="min-h-[50vh] bg-white text-black px-4 py-16">
-        <h2 className="text-2xl font-semibold mb-4">Partenaires</h2>
-        <p>Contenu de la section Partenaires.</p>
-      </section>
     </div>
 
   );

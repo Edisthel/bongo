@@ -8,35 +8,70 @@ import {
   PlayCircle, // Pour les médias (vidéo/quiz)
   CheckCircle2 
 } from "lucide-react";
+import  Link  from "next/link";
 
 const features = [
   {
-    title: "Apprentissage Interactif",
-    description: "Fini les PDF statiques. Manipulez des modèles 3D, simulez des expériences chimiques et visualisez les mathématiques en temps réel.",
+    title: "Soutiens  aux familles",
+    description: "Accompagnement moral, social et matériel des familles en difficulté.",
     icon: Gamepad2,
     gradient: "from-blue-500 to-cyan-500",
-    tags: ["Simulations", "3D", "Immersion"]
+    tags: ["Moral", "Social", "Matériel"]
   },
   {
-    title: "Formats Variés & Complets",
-    description: "Une bibliothèque multimédia complète pour ne jamais s'ennuyer. Alternez entre théorie, pratique et évaluation ludique.",
+    title: "Actions Communautaires",
+    description: "Organisation d’actions collectives pour renforcer la solidarité locale.",
     icon: PlayCircle,
     gradient: "from-purple-500 to-pink-500",
-    tags: ["Cours", "Exercices", "Quiz", "Vidéos 4K"]
+    tags: ["Organisation", "Mobilisation", "Planification"]
   },
   {
-    title: "Vulgarisation & Expertise",
-    description: "Que vous soyez débutant ou futur ingénieur, le contenu s'adapte. Commencez par comprendre le concept, puis plongez dans les formules complexes.",
+    title: "Actions Communautaires trat t",
+    description: "Organisation d’actions collectives pour renforcer la solidarité locale.",
+    icon: PlayCircle,
+    gradient: "from-purple-500 to-pink-500",
+    tags: ["Organisation", "Mobilisation", "Planification"]
+  },
+  {
+    title: "Actions Communautaires sqshjh",
+    description: "Organisation d’actions collectives pour renforcer la solidarité locale.",
+    icon: PlayCircle,
+    gradient: "from-purple-500 to-pink-500",
+    tags: ["Organisation", "Mobilisation", "Planification"]
+  },
+  {
+    title: "Formation et sensibilisation",
+    description: "Ateliers, conférences et formations sur les valeurs et le vivre-ensemble.",
     icon: Layers,
     gradient: "from-amber-500 to-orange-500",
-    tags: ["Débutant", "Expert", "Progressif"]
+    tags: ["Débutant", "Progressif"]
   }
 ];
 
 export default function FeaturesSection() {
   return (
-    <section className="w-full py-20 bg-slate-900 relative overflow-hidden">
-      
+    <section className="w-full py-20 bg-green-800 relative overflow-hidden">
+      <header className="w-full fixed top-0 left-0 z-20 bg-black/50 backdrop-blur">
+        <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+          <div className="text-lg font-semibold">
+            Autres
+          </div>
+          <ul className="flex gap-6 text-sm md:text-base">
+            <li>
+              <Link href="../" >Accueil</Link>
+            </li>
+            <li>
+              <Link href="../cfb" >CFB</Link>
+            </li>
+            <li>
+              <Link href="../gestion" >Gestion Corridor</Link>
+            </li>
+            <li className="bg-white text-black px-1 py-1 rounded-md" >
+              <Link href="#" >Autres Activités</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
       {/* Background decoration subtile */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-blue-900/20 blur-[100px] rounded-full pointer-events-none" />
 
@@ -51,16 +86,16 @@ export default function FeaturesSection() {
             transition={{ duration: 0.5 }}
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white"
           >
-            Une pédagogie <span className="text-blue-400">nouvelle génération</span>
+            Nos différents <span className="text-green-400">activités</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto max-w-[700px] text-slate-400 md:text-xl"
+            className="mx-auto max-w-[700px] text-slate-400 md:text-xl text-yellow-300"
           >
-            Tout ce dont vous avez besoin pour exceller en sciences, réuni sur une seule plateforme intelligente.
+            Découvrez les principales activités menées par notre assotion pour soutenir la communauté et porter nos valeurs sur le terrain.
           </motion.p>
         </div>
 
